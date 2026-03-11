@@ -1,0 +1,14 @@
+# ── FastAPI web framework ──────────────────────────────────────────────────
+fastapi>=0.111.0
+
+# ── ASGI server (run with: uvicorn main:app --reload) ─────────────────────
+uvicorn[standard]>=0.29.0
+
+# ── Data & ML ──────────────────────────────────────────────────────────────
+scikit-learn>=1.4.0        # must match (or be >= ) the version used to train the model
+numpy>=1.26.0
+pandas>=2.2.0
+joblib>=1.3.0
+
+# ── Input validation (used by FastAPI under the hood) ─────────────────────
+pydantic>=2.7.0
