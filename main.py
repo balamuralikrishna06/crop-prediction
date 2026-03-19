@@ -122,10 +122,16 @@ class CropPrediction(BaseModel):
 # ---------------------------------------------------------------------------
 # Endpoints
 # ---------------------------------------------------------------------------
-@app.get("/", summary="Health check")
+@app.get("/", summary="Root")
 def root():
-    """Simple health-check to confirm the API is running."""
+    """Root endpoint."""
     return {"status": "ok", "message": "Crop Recommendation API is running."}
+
+
+@app.get("/health", summary="Health check")
+def health():
+    """Railway health-check endpoint."""
+    return {"status": "ok"}
 
 
 @app.post(
